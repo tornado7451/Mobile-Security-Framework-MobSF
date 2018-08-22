@@ -50,6 +50,7 @@
     </script>
 
     <h2 class="page-header"><strong>تجزیه وتحلیل پویا </strong>- {{ pkg }}</h2>
+    <hr/>
     <input type="hidden" id="screen_width" value="">
     <input type="hidden" id="screen_height" value="">
     {% comment %}<div class="row">
@@ -76,45 +77,35 @@
 
     <div class="row">
         <div class="col-md-2">
-            <p id="but">
+            <p id="but" align="center">
 
-                <a id="start" class="btn btn-primary glyphicon" role="button" style="width: 160px; text-align: center">ایجاد
+                <a id="start" class="btn btn-primary glyphicon" role="button" style="width: 160px; text-align: center;margin-bottom: 5px">ایجاد
                     محیط عملیات</a>
                 <a id="screen" class="btn btn-primary" role="button"
-                   style="visibility: hidden;width: 160px; text-align: center">نمایش صغحه</a>
+                   style="visibility: hidden;width: 160px; text-align: center;margin-bottom: 5px">نمایش صغحه</a>
                 <a id="rootca" class="btn btn-primary" role="button"
-                   style="visibility: hidden;width: 160px; text-align: center">حذف RootCA</a>
+                   style="visibility: hidden;width: 160px; text-align: center;margin-bottom: 5px">حذف RootCA</a>
                 <a id="expactt" class="btn btn-primary" role="button"
-                   style="visibility: hidden;width: 160px; text-align: center">استخراج اطلاعات تست</a>
+                   style="visibility: hidden;width: 160px; text-align: center;margin-bottom: 5px">استخراج اطلاعات تست</a>
                 <br/>
                 <br/>
                 <a id="actt" class="btn btn-primary" role="button"
-                   style="visibility: hidden;width: 160px; text-align: center">شروع تست فرم های</a>
+                   style="visibility: hidden;width: 160px; text-align: center;margin-bottom: 5px">شروع تست فرم های</a>
                 <a id="ss" class="btn btn-primary" role="button"
-                   style="visibility: hidden;width: 160px; text-align: center">گرفتن عکس از صفحه</a>
+                   style="visibility: hidden;width: 160px; text-align: center;margin-bottom: 5px">گرفتن عکس از صفحه</a>
                 <a id="stop" class="btn btn-info" role="button"
-                   style="visibility: hidden;width: 160px; text-align: center">اتمام</a>
-
+                   style="visibility: hidden;width: 160px; text-align: center;margin-bottom: 5px">اتمام</a>
+<hr>
+                <div id="adb" style="visibility: hidden">
+                            <p>اجرای دستورات adb</p> <textarea id="cmd"  class="form-control" type="text" style="height: 100px"
+                                                                 placeholder="shell am startservice -n com.mypackage/.service.MyService"></textarea> </br>
+                            <a id="exec" class="btn btn-primary btn-lg" role="button">اجرا</a>
+                        </div>
             </p>
         </div>
-        <div class="col-md-4">
-            <!-- Custom Tabs -->
 
-            <div class='marvel-device htc-one'>
-                <div class='top-bar'></div>
-                <div class='camera'></div>
-                <div class='sensor'></div>
-                <div class='speaker'></div>
-                <div class='screen' id='container'>
-                    <img width='320' height='580' src='../download/screen/screen.png' id='my' onerror='loading()'
-                         style='background-color:black;'>
-                </div>
-            </div>
-            <!-- nav-tabs-custom -->
-        </div>
-        <!-- /.col -->
 
-        <div class="col-md-3 col-md-push-1">
+        <div class="col-md-5">
             <!-- Custom Tabs (Pulled to the right) -->
             <div class="nav-tabs-custom">
 
@@ -138,6 +129,22 @@
                     </div>
                 </div>
                 <!-- /.tab-content -->
+            </div>
+            <!-- nav-tabs-custom -->
+        </div>
+        <!-- /.col -->
+    <div class="col-md-5">
+            <!-- Custom Tabs -->
+
+            <div class='marvel-device htc-one'>
+                <div class='top-bar'></div>
+                <div class='camera'></div>
+                <div class='sensor'></div>
+                <div class='speaker'></div>
+                <div class='screen' id='container'>
+                    <img width='320' height='580' src='../download/screen/screen.png' id='my' onerror='loading()'
+                         style='background-color:black;'>
+                </div>
             </div>
             <!-- nav-tabs-custom -->
         </div>
